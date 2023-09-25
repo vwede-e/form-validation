@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet"/>
+    <title>Form Validation</title>
+    <script src="./app.js" defer></script>
+</head>
+
+<body>
+    <form action="post">
+        <div>
+            <label for="name">Name*</label>
+            <input type="text" id = "name" required minlength="2" name = "name"/>
+            <p class="error"></p>
+        </div>
+
+        <div>
+            <label for="password">Password*</label>
+            <input name = "password" type="password", id="password" required minlength="6"/>
+            <p class="error"></p>
+        </div>
+
+        <div>
+            <label for="password-confirmation">Confirm Password*</label>
+            <input name = "Confirmation" type="password", id="password-confirmation" required minlength="6"/>
+            <p class="error"></p>
+        </div>
+
+        <div>
+            <label for="email">Email*</label>
+            <input name = "email" type="email", id="email" required/>
+            <p class="error"></p>
+        </div>
+
+        <div>
+            Select Protein Source
+        <div class="protein">
+            <div>
+                <input type="radio" id="chicken" value="chicken" name="protein" required> 
+                <label for ="chicken"">Chicken</label>
+            </div>
+            <div>
+                <input type="radio" id="fish" required value="fish" name="protein">
+                <label for ="fish">Fish</label>
+            </div>
+            <div>
+                <input type="radio" id="beef" required value="beef" name="protein">
+                <label for ="beef">Beef</label>
+            </div>    
+        </div>
+        <p class="error"></p>
+        </div>
+
+        <div>
+            <label for="country">Select Country</label>
+            <select name="country" id="country">
+            <option value="ngr">Nigeria</option>
+            </select>
+            <p class="error"></p>
+        </div>
+
+        <div class="button-container">
+            <button type="submit">Submit</button>
+        </div>
+        </form>
+</body>
+</html>
